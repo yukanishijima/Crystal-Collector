@@ -108,16 +108,127 @@ input, select {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.wrap {
+  /* background: rgba(249, 239, 252, 0.2); */
+  margin: 5px;
+  height: 98vh;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 100;
+  border: 2px solid black;
+}
 
 /* title
 ------------------------------------- */
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: 0.07em;
+  padding: 30px 0;
+  text-align: center;
+  text-transform: lowercase;
+
+  position: relative;
+}
+h1:after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background: black;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 /* main
 ------------------------------------- */
+section {
+  width: 260px;
+  margin: 0 auto;
+}
+section ol {
+  text-align: left;
+}
+section ol li {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+section p {
+  text-align: center;
+  color: gold;
+  font-weight: 900;
+  font-size: 30px;
+}
+.score {
+  display: flex;
+  width: 260px;
+  margin: 20px auto;
+}
+.targetScore, .yourScore {
+  width: 50%;
+  text-align: center;
+}
+.targetScore p, .yourScore p {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: lowercase;
+  margin-bottom: 10px;
+  position: relative;
+}
+.targetScore p:after, .yourScore p:after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#targetScore, #yourScore {
+  font-size: 20px;
+  font-weight: 600;
 
+  height: 35px;
+  width: 35px;
+  display: inline-block;
+  border-radius: 20px;
+  /* background: gold; */
+}  
 
 /* crystals
 ------------------------------------- */
+.crystals {
+  width: 260px;
+  margin: 0 auto;
+}
+.button {
+  border: 0;
+  background: none;
+  padding: 0 5px;
+}
+.crystal {
+  width: 50px;
+  height: 50px;
+}
 
 /* wins and losses
 ------------------------------------- */
+.result {
+  display: flex;
+  width: 260px;
+  margin: 20px auto;
+}
+.wins, .losses {
+  width: 50%;
+  text-align: center;
+}
+.wins p, .losses p {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: lowercase;
+  margin-bottom: 10px;
+}
+#wins, #losses {
+  font-size: 20px;
+  font-weight: 600;
+}

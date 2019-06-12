@@ -67,25 +67,25 @@ $(document).ready(function(){
   $("#button-1").click(function() {
     yourScore += crystal1;
     $("#yourScore").text(yourScore);
-    $("#message").html("Keep trying!");
+    $("#message").html("Keep collecting!");
     checkResult();
   });
   $("#button-2").click(function() {
     yourScore += crystal2;
     $("#yourScore").text(yourScore);
-    $("#message").html("Keep trying!");
+    $("#message").html("Keep collecting!");
     checkResult();
   });
   $("#button-3").click(function() {
     yourScore += crystal3;
     $("#yourScore").text(yourScore);
-    $("#message").html("Keep trying!");
+    $("#message").html("Keep collecting!");
     checkResult();
   });
   $("#button-4").click(function() {
     yourScore += crystal4;
     $("#yourScore").text(yourScore);
-    $("#message").html("Keep trying!");
+    $("#message").html("Keep collecting!");
     checkResult();
   });
 });
