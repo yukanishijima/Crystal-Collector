@@ -44,6 +44,7 @@ function checkResult() {
     wins = 1 + wins;
     $("#wins").text(wins);
     console.log("Wins: " + wins);
+    $("#message").html("Congrats! You got it right!");
     reset();
   }  
   //if your score exceeds target score
@@ -51,6 +52,7 @@ function checkResult() {
     losses++;
     $("#losses").text(losses);
     console.log("Losses: " + losses);
+    $("#message").html("You lost!");
     reset();
   }
 }
@@ -65,22 +67,25 @@ $(document).ready(function(){
   $("#button-1").click(function() {
     yourScore += crystal1;
     $("#yourScore").text(yourScore);
+    $("#message").html("Keep trying!");
     checkResult();
   });
-
   $("#button-2").click(function() {
     yourScore += crystal2;
     $("#yourScore").text(yourScore);
+    $("#message").html("Keep trying!");
     checkResult();
   });
   $("#button-3").click(function() {
     yourScore += crystal3;
     $("#yourScore").text(yourScore);
+    $("#message").html("Keep trying!");
     checkResult();
   });
   $("#button-4").click(function() {
     yourScore += crystal4;
     $("#yourScore").text(yourScore);
+    $("#message").html("Keep trying!");
     checkResult();
   });
 });
