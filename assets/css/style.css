@@ -109,12 +109,13 @@ input, select {
   box-sizing: border-box;
 }
 .wrap {
-  /* background: rgba(249, 239, 252, 0.2); */
+  background: rgba(249, 239, 252, 0.5);
   margin: 5px;
   height: 98vh;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair+Display', serif;
   font-weight: 100;
   border: 2px solid black;
+  color: rgba(130, 130, 130, 1);
 }
 
 /* title
@@ -123,10 +124,12 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   font-weight: 100;
+  color: black;
   letter-spacing: 0.07em;
-  padding: 30px 0;
+  padding: 25px 0;
   text-align: center;
   text-transform: lowercase;
+  height: 17vh;
 
   position: relative;
 }
@@ -143,22 +146,26 @@ h1:after {
 
 /* main
 ------------------------------------- */
-section {
+ol {
   width: 260px;
   margin: 0 auto;
+  height: 30vh;
 }
-section ol {
+ol li {
   text-align: left;
-}
-section ol li {
   margin-bottom: 10px;
-  font-size: 12px;
+  font-size: 11px;
 }
-section p {
+#message {
   text-align: center;
   color: gold;
-  font-weight: 900;
+  font-weight: 400;
   font-size: 30px;
+  height: 7vh;
+  padding: 5px;
+}
+section {
+  height: 30vh;
 }
 .score {
   display: flex;
@@ -171,13 +178,14 @@ section p {
 }
 .targetScore p, .yourScore p {
   font-family: 'Montserrat', sans-serif;
+  color: black;
   text-transform: lowercase;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   position: relative;
 }
 .targetScore p:after, .yourScore p:after {
     content: "";
-    width: 50px;
+    width: 60px;
     height: 2px;
     background: black;
     position: absolute;
@@ -186,8 +194,10 @@ section p {
     transform: translateX(-50%);
 }
 #targetScore, #yourScore {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 25px;
+  font-weight: 400;
+  color: black;
+
 
   height: 35px;
   width: 35px;
@@ -217,7 +227,7 @@ section p {
 .result {
   display: flex;
   width: 260px;
-  margin: 20px auto;
+  margin: 23px auto;
 }
 .wins, .losses {
   width: 50%;
@@ -225,10 +235,23 @@ section p {
 }
 .wins p, .losses p {
   font-family: 'Montserrat', sans-serif;
+  color: black;
   text-transform: lowercase;
   margin-bottom: 10px;
+  position: relative;
+}
+.wins p:after, .losses p:after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: black;
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 #wins, #losses {
   font-size: 20px;
-  font-weight: 600;
+  color: black;
+  font-weight: 400;
 }
