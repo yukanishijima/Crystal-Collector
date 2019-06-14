@@ -108,6 +108,10 @@ input, select {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+main {
+  max-width: 1500px;
+  margin: 0 auto;
+}
 .wrap {
   background: rgba(249, 239, 252, 0.5);
   margin: 5px;
@@ -129,7 +133,7 @@ h1 {
   padding: 25px 0;
   text-align: center;
   text-transform: lowercase;
-  height: 17vh;
+  /* height: 17vh; */
 
   position: relative;
 }
@@ -139,7 +143,7 @@ h1:after {
   height: 2px;
   background: black;
   position: absolute;
-  top: 70px;
+  top: 60px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -149,7 +153,7 @@ h1:after {
 ol {
   width: 260px;
   margin: 0 auto;
-  height: 30vh;
+  padding-left: 20px;
 }
 ol li {
   text-align: left;
@@ -161,11 +165,10 @@ ol li {
   color: gold;
   font-weight: 400;
   font-size: 30px;
-  height: 7vh;
   padding: 5px;
 }
 section {
-  height: 30vh;
+  height: 40vh;
 }
 .score {
   display: flex;
@@ -203,7 +206,6 @@ section {
   width: 35px;
   display: inline-block;
   border-radius: 20px;
-  /* background: gold; */
 }  
 
 /* crystals
@@ -255,3 +257,34 @@ section {
   color: black;
   font-weight: 400;
 }
+
+/* for wider screen size
+------------------------------------- */
+@media screen and (min-width: 600px) {
+  ol {
+    width: 420px;
+    margin: 10px auto;
+  }
+  ol li {
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 45px;
+    padding: 30px 0 35px;
+  }
+  h1:after {
+    width: 150px;
+    height: 3px;
+    top: 90px;
+  }
+  .crystals {
+    width: 380px;
+    margin: 20px auto;
+  }
+  .crystal {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+
