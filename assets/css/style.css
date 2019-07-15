@@ -121,10 +121,10 @@ main {
 /* height
 ------------------------------------- */
 header {
-  height: 25vh;
+  height: 28vh;
 }
 .main-wrap {
-  height: 75vh;
+  height: 72vh;
 }
 
 /* header
@@ -349,7 +349,7 @@ ol li {
   ol li {
     font-size: 15px;
   }
-  .crystals {
+  .crystals, .score, .result {
     width: 380px;
   }
   .crystal {
