@@ -21,87 +21,94 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Montserrat:300,400,500&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css?family=Playfair+Display|Montserrat:300,400,500|PT+Sans+Caption:400,700|Play:400,700&display=swap"
     rel="stylesheet">
   <!-- link to the jQuery Library -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 </head>
 
 <body>
-  <header></header>
+  <div class="wrap">
 
-  <main>
-    <div class="wrap">
-
-      <h1>Crystal</h1>
-      <h1>Collector</h1>
-      <button type="button" id="instruction-button">how to play
-        &#8594;</button>
+    <header>
+      <div class="title-wrap">
+        <h1 class="my-h1">Crystal</h1><br>
+        <h1 class="my-h1">Collector</h1>
+        <button type="button" id="instruction-button">how to play
+          &#8594;</button>
+      </div>
 
       <div class="modal" id="instruction" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <h5 class="modal-title" id="exampleModalCenterTitle">instruction</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+          <div class="modal-content" style="display: initial">
+            <h5 class="my-h5">instruction</h5>
+            <button type="button" class="close" id="close-sign" data-dismiss="modal" aria-label="Close">
+              <span>&times;</span>
             </button>
             <div class="modal-body">
               <ol>
-                <li>At the start of the game, you will be given a random number and 4 crystals.</li>
-                <li>By clicking on a crystal, you will add a specific amount of points to your total score.</li>
-                <li>You win the game by matching your total score to random number. You lose the game if your total
-                  score goes
-                  above the random number.</li>
+                <li>You are given a target score and 4 crystals.</li>
+                <li>Click on a crystal to add a specific amount of points to your total score.</li>
                 <li>The value of each crystal is hidden from you until you click on it.</li>
-                <li>Each time when the game starts, the game will change the values of each crystal.</li>
+                <li>You win the game when you match your total score to the target score. You lose the game if your
+                  total score goes above the target score.</li>
+                <li>Every time the game starts, a target score and values of each crystal will be changed.</li>
               </ol>
             </div>
           </div>
         </div>
       </div>
+    </header>
 
-      <p id="message">Enjoy!</p>
+    <main>
+      <div class="main-wrap">
 
-      <section>
-        <div class="score">
-          <div class="targetScore">
-            <p>Target Score</p>
-            <span id="targetScore"></span>
+        <p id="message">click any crystal to start!</p>
+
+        <section>
+          <div class="score">
+            <div class="targetScore">
+              <p>Target Score</p>
+              <span id="targetScore"></span>
+            </div>
+
+            <div class="yourScore">
+              <p>Your Score</p>
+              <span id="yourScore">0</span>
+            </div>
           </div>
 
-          <div class="yourScore">
-            <p>Your Score</p>
-            <span id="yourScore">0</span>
-          </div>
-        </div>
-
-        <div class="crystals">
-          <button id="button-1" class="button"><img src="assets/images/diamond1.png" alt="crystal"
-              class="crystal"></button>
-          <button id="button-2" class="button"><img src="assets/images/diamond2.png" alt="crystal"
-              class="crystal"></button>
-          <button id="button-3" class="button"><img src="assets/images/diamond3.png" alt="crystal"
-              class="crystal"></button>
-          <button id="button-4" class="button"><img src="assets/images/diamond4.png" alt="crystal"
-              class="crystal"></button>
-        </div>
-
-        <div class="result">
-          <div class="wins">
-            <p>Wins</p>
-            <span id="wins">0</span>
+          <div class="crystals">
+            <button id="button-1" class="button"><img src="assets/images/diamond1.png" alt="crystal"
+                class="crystal"></button>
+            <button id="button-2" class="button"><img src="assets/images/diamond2.png" alt="crystal"
+                class="crystal"></button>
+            <button id="button-3" class="button"><img src="assets/images/diamond3.png" alt="crystal"
+                class="crystal"></button>
+            <button id="button-4" class="button"><img src="assets/images/diamond4.png" alt="crystal"
+                class="crystal"></button>
           </div>
 
-          <div class="losses">
-            <p>Losses</p>
-            <span id="losses">0</span>
+          <div class="result">
+            <div class="wins">
+              <p>Wins</p>
+              <span id="wins">0</span>
+            </div>
+
+            <div class="losses">
+              <p>Losses</p>
+              <span id="losses">0</span>
+            </div>
           </div>
-        </div>
 
-      </section>
+        </section>
 
-    </div>
-  </main>
+      </div>
+      <!--end of .main-wrap-->
+
+    </main>
+  </div>
 
   <footer></footer>
   <script type="text/javascript" src="assets/javascript/game.js"></script>

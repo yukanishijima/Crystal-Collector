@@ -113,106 +113,183 @@ main {
   margin: 0 auto;
 }
 .wrap {
-  background: rgba(249, 239, 252, 0.5);
-  margin: 5px;
-  height: 98vh;
   font-family: 'Playfair+Display', serif;
   font-weight: 100;
-  border: 2px solid black;
-  color: rgba(130, 130, 130, 1);
+  text-align: center;
 }
 
-/* title
+/* height
 ------------------------------------- */
-h1 {
+header {
+  height: 25vh;
+}
+.main-wrap {
+  height: 75vh;
+}
+
+/* header
+------------------------------------- */
+header {
+  position:relative;
+  background: white;
+}
+.title-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.my-h1 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 100;
   color: black;
   letter-spacing: 0.07em;
-  padding: 25px 0;
   text-align: center;
   text-transform: lowercase;
-  /* height: 17vh; */
 
   position: relative;
+  display: inline-block;
 }
-h1:after {
+.my-h1:after {
   content: "";
-  width: 100px;
+  width: 100%;
   height: 2px;
   background: black;
   position: absolute;
-  top: 60px;
+  top: 42px;
   left: 50%;
   transform: translateX(-50%);
 }
+#instruction-button {
+  display: block;
+  margin: 0 auto;
 
-/* main
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+  color: gray;
+  border: none;
+  background: none;
+}
+
+/* modal style
 ------------------------------------- */
+.modal-content {
+  position: relative;
+}
+#close-sign {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  color: rgba(0, 0, 0, 0.7);
+  opacity: 0.3;
+  font-weight: 100;
+}
+.my-h5 {
+  margin: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  display: inline-block;
+}
+.my-h5:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background:rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 ol {
   width: 260px;
   margin: 0 auto;
   padding-left: 20px;
 }
 ol li {
+  font-family: 'Montserrat', sans-serif;
   text-align: left;
   margin-bottom: 10px;
-  font-size: 11px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* main
+------------------------------------- */
+.main-wrap {
+  background: rgb(255, 218, 239);
 }
 #message {
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
-  color: gold;
-  font-weight: 400;
-  font-size: 30px;
+  color: black;
+  font-weight: 100;
+  font-size: 21px;
   padding: 5px;
+  /* font-style: italic; */
+  position: relative;
+  display: inline-block;
+  margin: 30px 0 0;
+  padding: 0;
 }
-section {
-  height: 40vh;
+#message:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: black;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .score {
+  font-family: 'Montserrat', sans-serif;
   display: flex;
+  justify-content: center;
   width: 260px;
-  margin: 20px auto;
+  margin: 50px auto;
 }
 .targetScore, .yourScore {
   width: 50%;
   text-align: center;
+  position: relative;
+  height: 50px;
 }
 .targetScore p, .yourScore p {
-  font-family: 'Montserrat', sans-serif;
-  color: black;
+  color: white;
   text-transform: lowercase;
-  margin-bottom: 20px;
-  position: relative;
-}
-.targetScore p:after, .yourScore p:after {
-    content: "";
-    width: 60px;
-    height: 2px;
-    background: black;
-    position: absolute;
-    top: 22px;
-    left: 50%;
-    transform: translateX(-50%);
+  margin: 0px;
+  display: inline-block;
+  width: 100%;
+  z-index: 1;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #targetScore, #yourScore {
-  font-size: 25px;
-  font-weight: 400;
-  color: black;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-size: 55px;
+  font-weight: 100;
+  color: rgba(195, 15, 160, 1);
 
-
-  height: 35px;
-  width: 35px;
   display: inline-block;
-  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }  
 
 /* crystals
 ------------------------------------- */
 .crystals {
   width: 260px;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 .button {
   border: 0;
@@ -228,8 +305,9 @@ section {
 ------------------------------------- */
 .result {
   display: flex;
+  justify-content: center;
   width: 260px;
-  margin: 23px auto;
+  margin: 30px auto;
 }
 .wins, .losses {
   width: 50%;
@@ -241,21 +319,24 @@ section {
   text-transform: lowercase;
   margin-bottom: 10px;
   position: relative;
+  display: inline-block;
 }
 .wins p:after, .losses p:after {
   content: "";
-  width: 30px;
+  width: 100%;
   height: 2px;
   background: black;
   position: absolute;
-  top: 18px;
+  top: 22px;
   left: 50%;
   transform: translateX(-50%);
 }
 #wins, #losses {
+  font-family: 'PT Sans Caption', sans-serif;
   font-size: 20px;
   color: black;
   font-weight: 400;
+  display: block;
 }
 
 /* for wider screen size
@@ -268,23 +349,11 @@ section {
   ol li {
     font-size: 15px;
   }
-  h1 {
-    font-size: 45px;
-    padding: 30px 0 35px;
-  }
-  h1:after {
-    width: 150px;
-    height: 3px;
-    top: 90px;
-  }
   .crystals {
     width: 380px;
-    margin: 20px auto;
   }
   .crystal {
     width: 80px;
     height: 80px;
   }
 }
-
-
