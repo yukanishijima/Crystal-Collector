@@ -34,6 +34,10 @@ function reset() {
   $("#yourScore").html(yourScore);
   generateTarget();
   generateCrystal();
+  $("#button-1").children("img").attr("src", "assets/images/diamond1.png");
+  $("#button-2").children("img").attr("src", "assets/images/diamond2.png");
+  $("#button-3").children("img").attr("src", "assets/images/diamond3.png");
+  $("#button-4").children("img").attr("src", "assets/images/diamond4.png");
 }
 
 //check win or loss
@@ -74,24 +78,40 @@ $(document).ready(function () {
     yourScore += crystal1;
     $("#yourScore").text(yourScore);
     $("#message").html("Keep collecting!");
+    $(this).children("img").attr("src", "assets/images/diamond1-blue.png");
+    $("#button-2").children("img").attr("src", "assets/images/diamond2.png");
+    $("#button-3").children("img").attr("src", "assets/images/diamond3.png");
+    $("#button-4").children("img").attr("src", "assets/images/diamond4.png");
     checkResult();
   });
   $("#button-2").click(function () {
     yourScore += crystal2;
     $("#yourScore").text(yourScore);
     $("#message").html("Keep collecting!");
+    $(this).children("img").attr("src", "assets/images/diamond2-red.png");
+    $("#button-1").children("img").attr("src", "assets/images/diamond1.png");
+    $("#button-3").children("img").attr("src", "assets/images/diamond3.png");
+    $("#button-4").children("img").attr("src", "assets/images/diamond4.png");
     checkResult();
   });
   $("#button-3").click(function () {
     yourScore += crystal3;
     $("#yourScore").text(yourScore);
     $("#message").html("Keep collecting!");
+    $(this).children("img").attr("src", "assets/images/diamond3-green.png");
+    $("#button-1").children("img").attr("src", "assets/images/diamond1.png");
+    $("#button-2").children("img").attr("src", "assets/images/diamond2.png");
+    $("#button-4").children("img").attr("src", "assets/images/diamond4.png");
     checkResult();
   });
   $("#button-4").click(function () {
     yourScore += crystal4;
     $("#yourScore").text(yourScore);
     $("#message").html("Keep collecting!");
+    $(this).children("img").attr("src", "assets/images/diamond4-yellow.png");
+    $("#button-1").children("img").attr("src", "assets/images/diamond1.png");
+    $("#button-2").children("img").attr("src", "assets/images/diamond2.png");
+    $("#button-3").children("img").attr("src", "assets/images/diamond3.png");
     checkResult();
   });
 });
