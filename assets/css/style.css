@@ -126,24 +126,50 @@ header {
 .main-wrap {
   height: 72vh;
 }
+#message {
+  height: 10vh;
+}
+section {
+  height: 62vh;
+}
+.score {
+  height: 28vh;
+}
+.crystals {
+  height: 10vh;
+}
+.result {
+  height: 25vh;
+}
+
 
 /* header
 ------------------------------------- */
 header {
   position:relative;
-  background: white;
+  background: url("../images/what-the-hex.png");
+}
+header:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.3);
 }
 .title-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
 }
 .my-h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 35px;
   font-weight: 100;
-  color: black;
+  color: rgb(51, 1, 35);
   letter-spacing: 0.07em;
   text-align: center;
   text-transform: lowercase;
@@ -155,7 +181,7 @@ header {
   content: "";
   width: 100%;
   height: 2px;
-  background: black;
+  background: rgb(51, 1, 35);
   position: absolute;
   top: 42px;
   left: 50%;
@@ -163,7 +189,7 @@ header {
 }
 #instruction-button {
   display: block;
-  margin: 0 auto;
+  margin: 5px auto 0;
 
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
@@ -221,37 +247,38 @@ ol li {
 /* main
 ------------------------------------- */
 .main-wrap {
-  background: rgb(255, 218, 239);
+  background: rgba(202, 169, 187, 0.7);
 }
 #message {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
-  color: black;
+  /* color: black; */
+  color: rgb(51, 1, 35);
   font-weight: 100;
   font-size: 21px;
   padding: 5px;
-  /* font-style: italic; */
   position: relative;
   display: inline-block;
-  margin: 30px 0 0;
-  padding: 0;
+  margin: 0;
+  padding: 30px 0 0;
 }
 #message:after {
     content: "";
     width: 100%;
     height: 2px;
-    background: black;
+    background: rgb(51, 1, 35);
     position: absolute;
-    top: 30px;
+    top: 60px;
     left: 50%;
     transform: translateX(-50%);
 }
 .score {
   font-family: 'Montserrat', sans-serif;
   display: flex;
-  justify-content: center;
-  width: 260px;
-  margin: 50px auto;
+  align-items: center;
+  justify-content: space-between;
+  width: 310px;
+  margin: 0px auto;
 }
 .targetScore, .yourScore {
   width: 50%;
@@ -274,9 +301,9 @@ ol li {
 }
 #targetScore, #yourScore {
   font-family: 'PT Sans Caption', sans-serif;
-  font-size: 55px;
+  font-size: 60px;
   font-weight: 100;
-  color: rgba(195, 15, 160, 1);
+  color: rgb(144, 1, 116);
 
   display: inline-block;
   position: absolute;
@@ -288,8 +315,11 @@ ol li {
 /* crystals
 ------------------------------------- */
 .crystals {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   width: 260px;
-  margin: 50px auto;
+  margin: 0px auto;
 }
 .button {
   border: 0;
@@ -305,17 +335,18 @@ ol li {
 ------------------------------------- */
 .result {
   display: flex;
+  align-items: center;
   justify-content: center;
   width: 260px;
-  margin: 30px auto;
+  margin: 0px auto;
 }
 .wins, .losses {
-  width: 50%;
+  width: 30%;
   text-align: center;
 }
 .wins p, .losses p {
   font-family: 'Montserrat', sans-serif;
-  color: black;
+  color: rgb(51, 1, 35);
   text-transform: lowercase;
   margin-bottom: 10px;
   position: relative;
@@ -325,7 +356,7 @@ ol li {
   content: "";
   width: 100%;
   height: 2px;
-  background: black;
+  background: rgb(51, 1, 35);
   position: absolute;
   top: 22px;
   left: 50%;
@@ -334,14 +365,23 @@ ol li {
 #wins, #losses {
   font-family: 'PT Sans Caption', sans-serif;
   font-size: 20px;
-  color: black;
+  /* color: black; */
+  color: rgb(51, 1, 35);
   font-weight: 400;
   display: block;
 }
 
 /* for wider screen size
 ------------------------------------- */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
+  .my-h1 {
+    font-size: 40px;
+    font-weight: 100;
+  }
+  .my-h1:after {
+    top: 50px;
+    height: 3px;
+  }
   ol {
     width: 420px;
     margin: 10px auto;
@@ -350,10 +390,22 @@ ol li {
     font-size: 15px;
   }
   .crystals, .score, .result {
-    width: 380px;
+    width: 500px;
+  }
+  #targetScore, #yourScore {
+    font-size: 60px;
+  }
+  .score {
+    justify-content: center;
+  }
+  .targetScore, .yourScore {
+    width: 40%;
   }
   .crystal {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
+  }
+  .button {
+    padding: 0 17px;
   }
 }
