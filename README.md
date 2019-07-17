@@ -1,6 +1,6 @@
 # Crystal Collector
 
-[Live](https://yukanishijima.github.io/Crystal-Collector/)
+[Live](https://yukanishijima.github.io/crystal-collector/)
 
 Click it, guess it, add it and collect it! 
 
