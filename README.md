@@ -14,7 +14,7 @@ A user wins when his score matches the target score. The user loses when his sco
 
 When a user wins or losses, the game will restart and display a new random target number and each crystal will have a new hidden number.  
 
-The “how to play” button will show a user the game instruction in a modal window.  
+The “how to play” button will show a user the game instructions in a modal window.  
 
 The game is fully responsive for mobile and laptop.  
 
