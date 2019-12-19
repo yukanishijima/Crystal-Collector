@@ -2,6 +2,8 @@
 
 [Live](https://yukanishijima.github.io/crystal-collector/)
 
+![image](assets/images/crystal-collector.png)
+
 Click it, guess it, add it and collect it! 
 
 ## Site Functionality and Features
